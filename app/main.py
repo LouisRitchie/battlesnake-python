@@ -38,7 +38,7 @@ def move():
     
     return {
         direction = avoid_walls()
-        'move': 'direction',
+        'move': direction
         'taunt': 'battlesnake-python!'
     }
 
