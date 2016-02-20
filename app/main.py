@@ -15,8 +15,8 @@ def index():
     )
 
     return {
-        'color': '#00ff70',
-        'head': head_url
+        'color': '#00ff77',
+        'head': http://i.imgur.com/tWoo7jR.png
     }
 
 
@@ -27,7 +27,7 @@ def start():
     # TODO: Do things with data
 
     return {
-        'taunt': 'William has changed the taunt (2:30 pm)'
+        'taunt': 'Hide yo kidsssssssssss'
     }
 
 
@@ -50,7 +50,7 @@ def end():
     # TODO: Do things with data
 
     return {
-        'taunt': 'battlesnake-python!'
+        'taunt': 'kony has trained another hundred child soldiers during this game'
     }
 
 def getSnake():
