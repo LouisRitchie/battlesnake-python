@@ -15,7 +15,7 @@ def index():
     )
 
     return {
-        'color': '#00ff70',
+        'color': '#00ff77',
         'head': http://i.imgur.com/tWoo7jR.png
     }
 
