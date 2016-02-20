@@ -27,7 +27,11 @@ def start():
     # TODO: Do things with data
 
     return {
+<<<<<<< HEAD
         'taunt': 'William has changed the taunt (2:30 pm)'
+=======
+        'taunt': 'This year it\'s real - I play for keeps'
+>>>>>>> f93e915c83851121b92cdaaa359cbf756c627eae
     }
 
 
