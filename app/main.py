@@ -15,7 +15,7 @@ def index():
     )
 
     return {
-        'color': '#00ff00',
+        'color': '#00ff02',
         'head': head_url
     }
 
@@ -27,7 +27,7 @@ def start():
     # TODO: Do things with data
 
     return {
-        'taunt': 'battlesnake-python!'
+        'taunt': 'This year it\'s real'
     }
 
 
@@ -38,7 +38,7 @@ def move():
     # TODO: Do things with data
 
     return {
-        'move': 'north',
+        'move': 'west',
         'taunt': 'battlesnake-python!'
     }
 
@@ -52,6 +52,8 @@ def end():
     return {
         'taunt': 'battlesnake-python!'
     }
+
+
 
 
 # Expose WSGI app (so gunicorn can find it)
