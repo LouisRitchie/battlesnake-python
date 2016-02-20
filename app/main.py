@@ -27,7 +27,7 @@ def start():
     # TODO: Do things with data
 
     return {
-        'taunt': 'This year it\'s real'
+        'taunt': 'This year it\'s real - I play for keeps'
     }
 
 
