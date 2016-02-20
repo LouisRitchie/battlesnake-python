@@ -57,11 +57,11 @@ def getSnake():
     
     data = bottle.request.json
     our_id = 'f023067e-5411-407e-b445-04fad300ef6c'
-    allsnakes = data[snakes]
+    allsnakes = data['snakes']
 
     for i in range(allsnakes.len())
         curr_snake = allsnakes[i]
-        if curr_snake.id == our_id
+        if curr_snake['id'] == our_id
             our_snake = allsnakes[i]
 
     return our_snake;
@@ -70,12 +70,11 @@ def getSnake():
 def avoid_walls:
 
     data = bottle.request.json
-    height = data[height]
-    width = data[width]
+    height = data['height']
+    width = data['width']
     snake = getSnake()
     coordinates = snake.coordinates
     direction = ''
-    boolean 
    
     if coordinates[0] == [0,0]
         direction = 'east'
@@ -89,6 +88,11 @@ def avoid_walls:
         direction = 'west'            
 
     return direction
+    
+    
+    
+    
+    
 
 
 
