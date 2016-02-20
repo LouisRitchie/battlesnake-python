@@ -52,7 +52,7 @@ def getSnake():
     for i in range(allsnakes.len()):
 
         curr_snake = allsnakes[i]
-        if curr_snake['id'] == our_id
+        if curr_snake['id'] == our_id:
             our_snake = allsnakes[i]
     return our_snake;
 
@@ -64,15 +64,15 @@ def avoid_walls():
     snake = getSnake()
     coordinates = snake['coordinates']
     direction = ''
-    if coordinates[0] == [0,0]
+    if coordinates[0] == [0,0]:
         direction = 'east'
-    if coordinates[0] == [width, 0]
+    if coordinates[0] == [width, 0]:
         direction = 'south'
-    if coordinates[0] == [width, height]
+    if coordinates[0] == [width, height]:
         direction = 'west'
-    if coordinates[0] == [0,height]
+    if coordinates[0] == [0,height]:
         direction = 'north' 
-    else 
+    else:
         direction = 'west'            
 
     return direction
