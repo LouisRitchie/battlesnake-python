@@ -37,8 +37,12 @@ def move():
      # TODO: Do things with data
     
     return {
+
         
         'move': avoid_walls()
+
+        
+
         'taunt': 'battlesnake-python!'
     }
 
