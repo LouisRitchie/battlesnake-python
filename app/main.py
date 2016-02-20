@@ -37,8 +37,8 @@ def move():
      # TODO: Do things with data
     
     return {
-        direction = avoid_walls()
-        'move': direction
+        
+        'move': avoid_walls()
         'taunt': 'battlesnake-python!'
     }
 
@@ -73,7 +73,7 @@ def avoid_walls:
     height = data['height']
     width = data['width']
     snake = getSnake()
-    coordinates = snake.coordinates
+    coordinates = snake['coordinates']
     direction = ''
    
     if coordinates[0] == [0,0]
