@@ -56,7 +56,7 @@ def getSnake():
     data = bottle.request.json
     our_id = 'f023067e-5411-407e-b445-04fad300ef6c'
     allsnakes = data['snakes']
-
+    
     for i in range(allsnakes.len())
         curr_snake = allsnakes[i]
         if curr_snake['id'] == our_id
