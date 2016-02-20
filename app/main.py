@@ -50,7 +50,7 @@ def end():
     # TODO: Do things with data
 
     return {
-        'taunt': 'battlesnake-python!'
+        'taunt': 'kony has trained another hundred child soldiers during this game'
     }
 
 
