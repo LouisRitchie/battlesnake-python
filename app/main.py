@@ -16,7 +16,7 @@ def index():
 
     return {
         'color': '#00ff70',
-        'head': http://i.imgur.com/tWoo7jR.png
+        'head': head_url
     }
 
 
@@ -33,12 +33,12 @@ def start():
 
 @bottle.post('/move')
 def move():
-    data = bottle.request.json
-
-    # TODO: Do things with data
-
+    
+     # TODO: Do things with data
+    
     return {
-        'move': 'west',
+        direction = avoid_walls()
+        'move': 'direction',
         'taunt': 'battlesnake-python!'
     }
 
@@ -52,6 +52,48 @@ def end():
     return {
         'taunt': 'battlesnake-python!'
     }
+
+def getSnake():
+    
+    data = bottle.request.json
+    our_id = 'f023067e-5411-407e-b445-04fad300ef6c'
+    allsnakes = data[snakes]
+
+    for i in range(allsnakes.len())
+        curr_snake = allsnakes[i]
+        if curr_snake.id == our_id
+            our_snake = allsnakes[i]
+
+    return our_snake;
+
+
+def avoid_walls:
+
+    data = bottle.request.json
+    height = data[height]
+    width = data[width]
+    snake = getSnake()
+    coordinates = snake.coordinates
+    direction = ''
+    boolean 
+   
+    if coordinates[0] == [0,0]
+        direction = 'east'
+    if coordinates[0] == [width, 0]
+        direction = 'south'
+    if coordinates[0] == [width, height]
+        direction = 'west'
+    if coordinates[0] == [0,height]
+        direction = 'north' 
+    else 
+        direction = 'west'            
+
+    return direction
+
+
+
+
+    
 
 
 
