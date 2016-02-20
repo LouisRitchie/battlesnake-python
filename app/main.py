@@ -27,7 +27,7 @@ def start():
     # TODO: Do things with data
 
     return {
-        'taunt': 'William has changed the taunt (2:30 pm)'
+        'taunt': 'Hide yo kidsssssssssss'
     }
 
 
