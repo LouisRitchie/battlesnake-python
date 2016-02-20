@@ -37,20 +37,14 @@ def move():
      # TODO: Do things with data
     
     return {
-
-        
         'move': avoid_walls()
-
-        
-
         'taunt': 'battlesnake-python!'
     }
-
 
 @bottle.post('/end')
 def end():
     data = bottle.request.json
-
+    
     # TODO: Do things with data
 
     return {
