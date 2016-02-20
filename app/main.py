@@ -68,7 +68,7 @@ def getSnake():
     return our_snake;
 
 
-def avoid_walls:
+def avoid_walls():
 
     data = bottle.request.json
     height = data['height']
@@ -90,19 +90,6 @@ def avoid_walls:
 
     return direction
     
-    
-    
-    
-    
-
-
-
-
-    
-
-
-
-
 # Expose WSGI app (so gunicorn can find it)
 application = bottle.default_app()
 if __name__ == '__main__':
