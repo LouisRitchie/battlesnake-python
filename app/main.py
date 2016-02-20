@@ -37,8 +37,9 @@ def move():
      # TODO: Do things with data
     
     return {
-        direction = avoid_walls()
-        'move': direction
+#       direction = avoid_walls()
+#       'move': direction
+        'move': 'south'
         'taunt': 'battlesnake-python!'
     }
 
