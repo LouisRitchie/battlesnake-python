@@ -69,28 +69,28 @@ def avoid_walls():
     
     print "curr coords: ", coordinates[0]
     #case snake hits left wall
+    direction = 'east'
 
     if snakehead[0] == 0:
         print "on turn ", turn, " we hit the left wall and go north'
-        direction = 'north'
+        return direction = 'north'
     #case snake hits right wall
     if snakehead[0] == width-1:
         print "on turn ", turn, " we hit the right wall and go south'
-        direction = 'south'
+        return direction = 'south'
     #case snake hits top
     if snakehead[1] == 0:
         print "on turn ", turn, " we hit the top and go east'
-        direction = 'east'
+        return direction = 'east'
     #case snake hits bottom
     if snakehead[1] == height-1:
         print "on turn ", turn, " we hit the bottom and go west'
-        direction = 'west' 
+        return direction = 'west' 
     # snake hits nothing
-    else:
-        print "on turn ", turn, " we continue in last direction"
-        direction = 'north'            
-
-    return direction
+    
+    print "on turn ", turn, " we continue in last direction"
+    return direction        
+    
   
 def get_enemycoords():
     data = bottle.request.json
