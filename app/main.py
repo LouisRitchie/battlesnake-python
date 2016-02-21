@@ -48,10 +48,6 @@ def getSnake():
     allsnakes = data['snakes']
     our_snake = None
     
-
-    for snakes in allsnakes:
-        if snake
-
     for i in range(allsnakes.len()):
 
         curr_snake = allsnakes[i]
@@ -82,7 +78,7 @@ def avoid_walls():
     return direction
   
 def get_enemycoords():
-    data = bottle.requseet.json
+    data = bottle.request.json
     enemy_coords = []
     our_id = 'f023067e-5411-407e-b445-04fad300ef6c'
     allsnakes = data['snakes']
@@ -94,8 +90,7 @@ def get_enemycoords():
 
     return enemy_coords 
 
-    our_snake = getSnake()
-    our_snake['health']
+    
 
 # Expose WSGI app (so gunicorn can find it)
 application = bottle.default_app()
