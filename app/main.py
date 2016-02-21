@@ -74,21 +74,20 @@ def avoid_walls():
    
 
     #case snake hits left wall
+    direction = 'east'
 
     if snakehead[0] == 0:
-        direction = 'north'
+        return direction = 'north'
     #case snake hits right wall
     if snakehead[0] == width-1:
-        direction = 'south'
+        return direction = 'south'
     #case snake hits top
     if snakehead[1] == 0:
-        direction = 'east'
+        return direction = 'east'
     #case snake hits bottom
     if snakehead[1] == height-1:
-        direction = 'west' 
-    # snake hits nothing
-    else direction = 'north'            
-
+        return direction = 'west' 
+    # snake hits nothing          
     return direction
   
 def get_enemycoords():
