@@ -64,6 +64,7 @@ def avoid_walls():
     snake = getSnake()
     coordinates = snake['coords']
     direction = ''
+    print coordinates[0]
     if coordinates[0][0] == 0:
         direction = 'north'
     if coordinates[0][0] == width:
