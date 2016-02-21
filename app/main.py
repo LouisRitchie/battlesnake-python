@@ -77,7 +77,8 @@ def get_food():
     snake = getSnake()
     coordinates = snake['coords']
     direction = ''
-
+    foodfound = False
+    
     snakehead = coordinates[0]
     for i in range(snakehead[0]-2, snakehead[0]+3):
         for j in range(snakehead[1]-2, snakehead[1]+3):
