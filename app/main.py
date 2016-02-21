@@ -48,7 +48,7 @@ def getSnake():
     allsnakes = data['snakes']
     our_snake = None
     
-    for i in range(allsnakes.len()):
+    for i in range(len(allsnakes)):
 
         curr_snake = allsnakes[i]
         if curr_snake['id'] == our_id:
