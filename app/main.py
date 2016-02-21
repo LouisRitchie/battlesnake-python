@@ -29,11 +29,22 @@ def start():
 
 @bottle.post('/move')
 def move():
-     # TODO: Do things with data
-    return {
-        'move': avoid_walls(),
-        'taunt': 'LETS GOOOOOOOOOOOOOOOOOOOOOOO'
-    }
+    snake = getSnake()
+    if snake['health'] < 15:
+        hungry = True
+    else:
+        hungry = False
+        
+    if(hungry): 
+        return {
+            'move': get_food(),
+            'taunt': 'MY BATTALION REQUIRES NOURISHMENT'
+        }
+    else:
+        return {
+            'move': avoid_walls(),
+            'taunt': 'HIDE YO KIDS'
+        }
 
 @bottle.post('/end')
 def end():
@@ -57,6 +68,42 @@ def getSnake():
             break
     return our_snake;
 
+def get_food():
+    data = bottle.request.json
+    height = data['height']
+    width = data['width']
+    turn = data['turn']
+    food = data['food']
+    snake = getSnake()
+    coordinates = snake['coords']
+    direction = ''
+    foodfound = False
+    
+    snakehead = coordinates[0]
+    for i in range(snakehead[0]-2, snakehead[0]+3):
+        for j in range(snakehead[1]-2, snakehead[1]+3):
+            if [i,j] in food:
+                nextfood = [i,j]
+                foodfound = True
+                
+    coords = snake['coords']
+                
+    if foodfound:
+        if snakehead[0] < nextfood[0]:
+            if coords[1][0] != snakehead[0]+1:
+                return 'east'
+        if snakehead[0] > nextfood[0]:
+            if coords[1][0] != snakehead[0]-1:
+                return 'west'
+        if snakehead[1] < nextfood[1]:
+            if coords[1][1] != snakehead[1]-1:
+                return 'north'
+        if snakehead[1] > nextfood[1]:
+            if coords[1][1] != snakehead[1]+1:
+                return 'south'
+    else: 
+        return avoid_walls()    
+
 def avoid_walls():
     data = bottle.request.json
     height = data['height']
@@ -65,7 +112,9 @@ def avoid_walls():
     snake = getSnake()
     coordinates = snake['coords']
     direction = ''
-
+    
+    
+    
     snakehead = coordinates[0]
     
     print "curr coords: ", coordinates[0]
