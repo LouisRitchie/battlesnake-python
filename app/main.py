@@ -9,10 +9,8 @@ def static(path):
 
 @bottle.get('/')
 def index():
-    head_url = '%s %s http://i.imgur.com/tWoo7jR.png' % (
-        bottle.request.urlparts.scheme,
-        bottle.request.urlparts.netloc
-    )
+    head_url = 'http://i.imgur.com/tWoo7jR.png' 
+    
     return {
         'color': '#00ff77',
         'head': head_url
@@ -96,7 +94,8 @@ def get_enemycoords():
 
     return enemy_coords 
 
-
+    our_snake = getSnake()
+    our_snake['health']
 
 # Expose WSGI app (so gunicorn can find it)
 application = bottle.default_app()
