@@ -62,16 +62,16 @@ def avoid_walls():
     height = data['height']
     width = data['width']
     snake = getSnake()
-    coordinates = snake['coordinates']
+    coordinates = snake['coords']
     direction = ''
-    if coordinates[0] == [0,0]:
-        direction = 'east'
-    if coordinates[0] == [width, 0]:
+    if coordinates[0][0] == 0:
+        direction = 'north'
+    if coordinates[0][0] == width:
         direction = 'south'
-    if coordinates[0] == [width, height]:
-        direction = 'west'
-    if coordinates[0] == [0,height]:
-        direction = 'north' 
+    if coordinates[0][1] == 0:
+        direction = 'east'
+    if coordinates[0] == height:
+        direction = 'west' 
     else:
         direction = 'west'            
 
@@ -83,10 +83,10 @@ def get_enemycoords():
     our_id = 'f023067e-5411-407e-b445-04fad300ef6c'
     allsnakes = data['snakes']
 
-    for i in range(allsnakes.len()):
+    for i in range(len(allsnakes)):
         curr_snake = allsnakes[i]
         if curr_snake['id'] != our_id:
-            enemy_coords.append(curr_snake['coordinates'])
+            enemy_coords.append(curr_snake['coords'])
 
     return enemy_coords 
 
