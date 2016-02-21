@@ -87,8 +87,7 @@ def avoid_walls():
     if snakehead[1] == height-1:
         direction = 'west' 
     # snake hits nothing
-    else:
-        direction = 'north'            
+    else direction = 'north'            
 
     return direction
   
