@@ -67,11 +67,11 @@ def avoid_walls():
     print coordinates[0]
     if coordinates[0][0] == 1:
         direction = 'north'
-    if coordinates[0][0] == 16:
+    if coordinates[0][0] == width-1:
         direction = 'south'
     if coordinates[0][1] == 1:
         direction = 'east'
-    if coordinates[0][1] == 16:
+    if coordinates[0][1] == height-1:
         direction = 'west' 
     else:
         direction = 'east'            
