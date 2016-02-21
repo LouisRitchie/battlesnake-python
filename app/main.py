@@ -30,7 +30,7 @@ def start():
 @bottle.post('/move')
 def move():
     snake = getSnake()
-    if snake['health'] < 100:
+    if snake['health'] < 15:
         hungry = True
     else:
         hungry = False
