@@ -73,6 +73,7 @@ def get_food():
     height = data['height']
     width = data['width']
     turn = data['turn']
+    food = data['food']
     snake = getSnake()
     coordinates = snake['coords']
     direction = ''
