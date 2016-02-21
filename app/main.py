@@ -57,7 +57,6 @@ def getSnake():
             break
     return our_snake;
 
-
 def avoid_walls():
     data = bottle.request.json
     height = data['height']
@@ -65,9 +64,15 @@ def avoid_walls():
     snake = getSnake()
     coordinates = snake['coords']
     direction = ''
+
     snakehead = coordinates[0]
-    print coordinates[0]
-    if snakehead[0] == 0:
+    
+   
+
+    print "width: ", width, "height: ", height
+    print "curr coords: ", coordinates[0]
+   
+     if snakehead[0] == 0:
         direction = 'north'
     if snakehead[0] == width-1:
         direction = 'south'
