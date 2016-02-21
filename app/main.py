@@ -74,19 +74,19 @@ def avoid_walls():
 
     if snakehead[0] == 0:
         print "on turn ", turn, " we hit the left wall and go north"
-        return direction = 'north'
+        return 'north'
     #case snake hits right wall
     if snakehead[0] == width-1:
         print "on turn ", turn, " we hit the right wall and go south"
-        return direction = 'south'
+        return 'south'
     #case snake hits top
     if snakehead[1] == 0:
         print "on turn ", turn, " we hit the top and go east"
-        return direction = 'east'
+        return 'east'
     #case snake hits bottom
     if snakehead[1] == height-1:
         print "on turn ", turn, " we hit the bottom and go west"
-        return direction = 'west' 
+        return 'west' 
     # snake hits nothing
     
     print "on turn ", turn, " we continue in last direction"
