@@ -70,7 +70,7 @@ def avoid_walls():
         direction = 'south'
     if coordinates[0][1] == 0:
         direction = 'east'
-    if coordinates[0] == height:
+    if coordinates[0][1] == height:
         direction = 'west' 
     else:
         direction = 'west'            
