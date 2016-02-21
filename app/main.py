@@ -84,15 +84,21 @@ def get_food():
                 nextfood = [i,j]
                 foodfound = True
                 
+    coords = snake['coords']
+                
     if foodfound:
         if snakehead[0] < nextfood[0]:
-            return 'east'
+            if coords[1][0] != snakehead[0]+1:
+                return 'east'
         if snakehead[0] > nextfood[0]:
-            return 'west'
+            if coords[1][0] != snakehead[0]-1:
+                return 'west'
         if snakehead[1] < nextfood[1]:
-            return 'north'
+            if coords[1][1] != snakehead[1]-1:
+                return 'north'
         if snakehead[1] > nextfood[1]:
-            return 'south'
+            if coords[1][1] != snakehead[1]+1:
+                return 'south'
     else: 
         return avoid_walls()    
 
@@ -104,7 +110,9 @@ def avoid_walls():
     snake = getSnake()
     coordinates = snake['coords']
     direction = ''
-
+    
+    
+    
     snakehead = coordinates[0]
     
     print "curr coords: ", coordinates[0]
