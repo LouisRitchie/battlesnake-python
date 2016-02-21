@@ -43,7 +43,7 @@ def move():
     else:
         return {
             'move': avoid_walls(),
-            'taunt': 'LETS GOOOOOOOOOOOOOOOOOOOOOOO'
+            'taunt': 'HIDE YO KIDS'
         }
 
 @bottle.post('/end')
