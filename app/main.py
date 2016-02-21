@@ -10,7 +10,6 @@ def static(path):
 @bottle.get('/')
 def index():
     head_url = 'http://i.imgur.com/tWoo7jR.png' 
-    
     return {
         'color': '#00ff77',
         'head': head_url
@@ -20,7 +19,9 @@ def index():
 @bottle.post('/start')
 def start():
     data = bottle.request.json
-    # TODO: Do things with data
+    height = data['height']
+    width = data['width']
+    print "width: ", width, "height: ", height
     return {
         'taunt': 'Hide yo kidsssssssssss'
     }
@@ -65,13 +66,13 @@ def avoid_walls():
     coordinates = snake['coords']
     direction = ''
     print coordinates[0]
-    if coordinates[0][0] == 1:
+    if coordinates[0][0] == 0:
         direction = 'north'
-    if coordinates[0][0] == 16:
+    if coordinates[0][0] == width-1:
         direction = 'south'
-    if coordinates[0][1] == 1:
+    if coordinates[0][1] == 0:
         direction = 'east'
-    if coordinates[0][1] == 16:
+    if coordinates[0][1] == height-1:
         direction = 'west' 
     else:
         direction = 'east'            
