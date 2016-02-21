@@ -72,7 +72,7 @@ def avoid_walls():
     print "width: ", width, "height: ", height
     print "curr coords: ", coordinates[0]
    
-     if snakehead[0] == 0:
+    if snakehead[0] == 0:
         direction = 'north'
     if snakehead[0] == width-1:
         direction = 'south'
