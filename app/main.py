@@ -72,7 +72,9 @@ def avoid_walls():
     print "width: ", width, "height: ", height
     print "curr coords: ", coordinates[0]
    
+
     #case snake hits left wall
+
     if snakehead[0] == 0:
         direction = 'north'
     #case snake hits right wall
